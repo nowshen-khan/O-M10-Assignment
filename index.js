@@ -13,54 +13,69 @@ function isEven(number) {
 	}
 }
 
-//3 not done
-function findMax(arr) {
-	let max = arr[0];
-	for (let i = 1; i < arr.length; i++) {
-		if (arr[i] > max) {
-			max = arr[i];
+//3 done
+function findMax(num) {
+	let myArr = String(num)
+		.split(",")
+		.map((num) => {
+			return Number(num);
+		});
+	let max = myArr[0]; // initialize to the first value
+
+	for (let i = 1; i < myArr.length; i++) {
+		if (myArr[i] > max) {
+			max = myArr[i];
 		}
 	}
 	return max;
 }
 
-//4 not done
-function reverseString() {
-	let str = prompt("Enter a string: ");
+//4 done
+function reverseString(str) {
 	let revStr = str.split("").reverse().join("");
 	return revStr;
 }
 
-//5 not done
-function filterOddNumber() {
-	let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-	let oddNum = arr.filter(function (num) {
+//5 done
+function filterOddNumber(num) {
+	let myArr = String(num)
+		.split("")
+		.map((num) => {
+			return Number(num);
+		});
+	let oddNum = myArr.filter(function (num) {
 		return num % 2 != 0;
 	});
 	return oddNum;
 }
 
 //6 done
-function sumArray() {
-	let arr = [1, 2, 3, 4, 5];
+function sumArray(num) {
+	let myArr = String(num)
+		.split("")
+		.map((num) => {
+			return Number(num);
+		});
 	let sum = 0;
-	for (let i = 0; i < arr.length; i++) {
-		sum += arr[i];
+	for (let i = 0; i < myArr.length; i++) {
+		sum += myArr[i];
 	}
+	return sum;
 }
 
 //7 done
-function sortArray() {
-	let arr = [1, 2, 3, 4, 5];
-	let sortedArr = arr.sort(function (a, b) {
+function sortArray(num) {
+	let myArr = String(num)
+		.split("")
+		.map((num) => {
+			return Number(num);
+		});
+	myArr.sort(function (a, b) {
 		return a - b;
 	});
+	return myArr;
 }
-
 //8 done
-function capitalizeFirstLetter() {
-	let str = prompt("Enter a string: ");
-	let firstLetter = str[0].toUpperCase();
-	let restOfStr = str.slice(1);
-	let capitalizedStr = firstLetter + restOfStr;
+function capitalizeFirstLetter(str) {
+	return str.charAt(0).toUpperCase() + str.slice(1);
 }
