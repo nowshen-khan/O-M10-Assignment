@@ -20,7 +20,7 @@ function findMax(num) {
 		.map((num) => {
 			return Number(num);
 		});
-	let max = myArr[0]; // initialize to the first value
+	let max = myArr[0]; 
 
 	for (let i = 1; i < myArr.length; i++) {
 		if (myArr[i] > max) {
