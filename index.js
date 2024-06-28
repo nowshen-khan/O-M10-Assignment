@@ -15,20 +15,15 @@ function isEven(number) {
 
 //3 done
 function findMax(num) {
-	let myArr = String(num)
-		.split(",")
-		.map((num) => {
-			return Number(num);
-		});
-	let max = myArr[0]; 
-
-	for (let i = 1; i < myArr.length; i++) {
-		if (myArr[i] > max) {
-			max = myArr[i];
+	let max = num[0];
+	for (let i = 1; i < num.length; i++) {
+		if (num[i] > max) {
+			max = num[i];
 		}
 	}
 	return max;
 }
+
 
 //4 done
 function reverseString(str) {
@@ -38,42 +33,32 @@ function reverseString(str) {
 
 //5 done
 function filterOddNumber(num) {
-	let myArr = String(num)
-		.split("")
-		.map((num) => {
-			return Number(num);
-		});
-	let oddNum = myArr.filter(function (num) {
-		return num % 2 != 0;
-	});
-	return oddNum;
+let oddArray = [];
+for (let i = 0; i < num.length; i++) {
+		if (num[i]%2!=0) {
+			oddArray.push(num[i]);
+		}
+	}
+
+	return oddArray;
 }
 
 //6 done
 function sumArray(num) {
-	let myArr = String(num)
-		.split("")
-		.map((num) => {
-			return Number(num);
-		});
 	let sum = 0;
-	for (let i = 0; i < myArr.length; i++) {
-		sum += myArr[i];
+	for (let i = 0; i < num.length; i++) {
+		sum += num[i];
 	}
 	return sum;
 }
 
 //7 done
 function sortArray(num) {
-	let myArr = String(num)
-		.split("")
-		.map((num) => {
-			return Number(num);
-		});
-	myArr.sort(function (a, b) {
+
+let sortArray=num.sort(function (a, b) {
 		return a - b;
 	});
-	return myArr;
+	return sortArray;
 }
 //8 done
 function capitalizeFirstLetter(str) {
