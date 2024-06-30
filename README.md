@@ -1,5 +1,6 @@
-# O-M10-Assignment
+# MERN-M10-Assignment
 
+Full Stack Web Development with MERN
 Module 10 Assignment :
 
 1) Write a function named ‘calculateSum’ that takes two arguments and returns their sum.
